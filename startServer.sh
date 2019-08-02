@@ -14,4 +14,4 @@ if [[ ! -z "$PID" ]]; then
   kill -2 $PID
 fi
 export PORT=8080
-nohup node bin/www & > nohup.out
+nohup node bin/www > nohup.out &
