@@ -6,7 +6,6 @@ if [ -z "$NODE_CHECK" ]; then
   source ~/.bashrc
   nvm install --lts=Dubnium
   nvm use lts/dubnium
-  npm install
 fi
 
 sudo chown -R $USER:$GROUP ~/.npm
@@ -17,4 +16,6 @@ if [[ ! -z "$PID" ]]; then
   kill -2 $PID
 fi
 export PORT=8080
+
+npm install
 nohup node bin/www > nohup.out &
