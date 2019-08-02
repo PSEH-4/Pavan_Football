@@ -6,6 +6,9 @@ nvm install --lts=Dubnium
 nvm use lts/dubnium
 npm install
 
+sudo chown -R $USER:$GROUP ~/.npm
+sudo chown -R $USER:$GROUP ~/.config
+
 PID=`ps | grep "node bin/www" | head -n 1 | awk '{print $1}'`
 if [[ ! -z "$PID"]]; then
   kill -2 $PID
