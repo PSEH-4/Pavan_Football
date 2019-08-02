@@ -19,6 +19,7 @@ node {
 ssh -i ~/jenkins.pem  -t ubuntu@18.191.244.179 << EOF
  mkdir -p ~/football_service$BUILD_NUMBER
  unzip football_service$BUILD_NUMBER.zip -d ~/football_service$BUILD_NUMBER
+ cd ~/football_service$BUILD_NUMBER/dist
  ./startServer.sh
 EOF
 '''
